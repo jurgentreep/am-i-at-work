@@ -50,7 +50,6 @@ if ($currentTime > $endTime || $isWeekend === true) {
 }
 
 // Printing the time we've calculated
-echo $interval->format("%d days, %h hours, %i minutes and %s seconds");
-echo '.';
+echo $interval->format("%d days, %h hours, %i minutes and %s seconds.");
 
 ?>

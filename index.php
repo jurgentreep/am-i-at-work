@@ -34,9 +34,9 @@ if ($currentTime >= $startTime &&
 	$isWeekend === false) {
 	$interval = $currentTime->diff($endTime);
 	
-	echo 'Yes, I will be working for another ';
+	$sentence = 'Yes, I will be working for another ';
 } else {
-	echo 'No, I am going to work again in ';
+	$sentence = 'No, I am going to work again in ';
 }
 
 // Check if we are before working hours
@@ -49,7 +49,10 @@ if ($currentTime > $endTime || $isWeekend === true) {
 	$interval = $nextWorkDay->diff($currentTime);
 }
 
-// Printing the time we've calculated
+require_once('views/header.php');
+
+// Printing the sentence and the time we've calculated
+echo $sentence;
 echo $interval->format("%d days, %h hours, %i minutes and %s seconds.");
 
-?>
+require_once('views/footer.php');

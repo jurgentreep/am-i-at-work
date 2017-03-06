@@ -13,7 +13,6 @@ switch ($dayNumber) {
 	case 5:
 		$daysUntilNextWorkDay = 3;
 		break;
-
 	case 6:
 		$daysUntilNextWorkDay = 2;
 		break;

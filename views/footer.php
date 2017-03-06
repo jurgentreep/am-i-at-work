@@ -1,13 +1,5 @@
 	</p>
 
-	<p>
-		The following 2 should be the same:
-	</p>
-
-	<p>
-		<?php echo $currentTime->format(DateTime::ATOM); ?>
-	</p>
-
 	<p class="javascript-date">
 
 	</p>

@@ -6,6 +6,7 @@ body {
 	font-family: 'Poiret One', cursive;
 	font-size: 2em;
 	background: #191919;
+    background: -webkit-radial-gradient(#232323, #191919);
     background: radial-gradient(#232323, #191919);
 	color: #fffcfa;
 	margin: 0;
@@ -17,7 +18,8 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	min-width: 90%;
 	border-radius: 5px;
 	overflow: hidden;
@@ -38,8 +40,9 @@ body {
     height: 1px;
     width: 100%;
     display: block;
-    background: #333;
-    background: -webkit-gradient(linear, 0 0, 100% 0, from(#141413), to(#141413), color-stop(50%, #fffcfa));
+    background: #fffcfa;
+    background: -webkit-linear-gradient(left, #141413, #fffcfa, #141413);
+    background: linear-gradient(left, #141413, #fffcfa, #141413);
 }
 
 @media (min-width: 620px) {

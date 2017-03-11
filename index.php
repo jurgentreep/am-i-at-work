@@ -52,6 +52,8 @@ require_once('views/header.php');
 
 // Printing the sentence and the time we've calculated
 echo $sentence;
-echo $interval->format("%d days, %h hours, %i minutes and %s seconds.");
+echo '<span class="timer">';
+echo $interval->format("%d days<br>%h hours<br>%i minutes<br>%s seconds");
+echo '</span>';
 
 require_once('views/footer.php');

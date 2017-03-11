@@ -48,13 +48,13 @@ function displayTime() {
 	}
 
 	// Only show singular when something is exactly 1
-	dayString = diff.days() === 1 ? ' day, ' : ' days, ';
-	hourString = diff.hours() === 1 ? ' hour, ' : ' hours, ';
-	minuteString = diff.minutes() === 1 ? ' minute and ' : ' minutes and ';
-	secondString = diff.seconds() === 1 ? ' second.' : ' seconds.';
+	dayString = diff.days() === 1 ? ' day<br>' : ' days<br>';
+	hourString = diff.hours() === 1 ? ' hour<br>' : ' hours<br>';
+	minuteString = diff.minutes() === 1 ? ' minute<br>' : ' minutes<br>';
+	secondString = diff.seconds() === 1 ? ' second' : ' seconds';
 
 	// Printing the sentence and the time we've calculated
-	paragraph.textContent = sentence + diff.days() + dayString + diff.hours() + hourString + diff.minutes() + minuteString + diff.seconds() + secondString;
+	paragraph.innerHTML = sentence + '<span class="timer">' + diff.days() + dayString + diff.hours() + hourString + diff.minutes() + minuteString + diff.seconds() + secondString + '</span>';
 }
 
 displayTime();

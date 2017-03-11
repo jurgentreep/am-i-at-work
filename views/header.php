@@ -6,7 +6,9 @@
 
 	<title>Am I at work</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<p class="date">
+	<div class="date-box">
+		<p class="date">

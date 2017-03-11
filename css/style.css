@@ -1,3 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	font-family: 'Helvetica', 'Arial', 'Verdana', 'Trebuchet MS';
+	font-family: 'Poiret One', cursive;
+	font-size: 2em;
+	background: #191919;
+    background: radial-gradient(#232323, #191919);
+	color: #fffcfa;
+	margin: 0;
+	height: 100vh;
+}
+
+.date-box {
+	background: #141413;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 90%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.timer {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 170px;
+}
+
+.date {
+	margin: 0.5em 1em;
+}
+
+.date-box::before, .date-box::after {
+	content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    background: #333;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#141413), to(#141413), color-stop(50%, #fffcfa));
+}
+
+@media (min-width: 620px) {
+	.date-box {
+		min-width: 620px;
+	}
 }

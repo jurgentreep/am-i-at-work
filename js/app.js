@@ -1,4 +1,4 @@
-var paragraph = document.querySelector('.javascript-date');
+var paragraph = document.querySelector('.date');
 
 function displayTime() {
 	// Variables to do my comparisons
@@ -47,8 +47,14 @@ function displayTime() {
 		var diff = moment.duration(nextWorkDay.diff(currentTime));
 	}
 
+	// Only show singular when something is exactly 1
+	dayString = diff.days() === 1 ? ' day, ' : ' days, ';
+	hourString = diff.hours() === 1 ? ' hour, ' : ' hours, ';
+	minuteString = diff.minutes() === 1 ? ' minute and ' : ' minutes and ';
+	secondString = diff.seconds() === 1 ? ' second.' : ' seconds.';
+
 	// Printing the sentence and the time we've calculated
-	paragraph.textContent = sentence + diff.days() + ' days, ' + diff.hours() + ' hours, ' + diff.minutes() + ' minutes and ' + diff.seconds() + ' seconds.';
+	paragraph.textContent = sentence + diff.days() + dayString + diff.hours() + hourString + diff.minutes() + minuteString + diff.seconds() + secondString;
 }
 
 displayTime();

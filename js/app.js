@@ -5,7 +5,7 @@ function displayTime() {
 	var currentTime = moment.tz('Europe/Amsterdam');
 	var startTime = moment.tz('Europe/Amsterdam').hours(9).minutes(0).seconds(0);
 	var endTime = moment.tz('Europe/Amsterdam').hours(17).minutes(30).seconds(0);
-	var dayNumber = currentTime.day();
+	var dayNumber = currentTime.isoWeekday();
 	var isWeekend = dayNumber >= 6;
 
 	// Determining the amount of days until the nextworkday

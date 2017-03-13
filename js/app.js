@@ -1,10 +1,14 @@
-var paragraph = document.querySelector('.date');
+var date_paragraph = document.querySelector('.date');
+var timezones_paragraph = document.createElement('p');
+date_paragraph.parentNode.insertBefore(timezones_paragraph, date_paragraph.nextSibling);
+timezones_paragraph.className = 'date';
 
 function displayTime() {
 	// Variables to do my comparisons
 	var currentTime = moment.tz('Europe/Amsterdam');
 	var startTime = moment.tz('Europe/Amsterdam').hours(9).minutes(0).seconds(0);
 	var endTime = moment.tz('Europe/Amsterdam').hours(17).minutes(30).seconds(0);
+	var localTime = moment();
 	var dayNumber = currentTime.isoWeekday();
 	var isWeekend = dayNumber >= 6;
 
@@ -54,7 +58,9 @@ function displayTime() {
 	secondString = diff.seconds() === 1 ? ' second' : ' seconds';
 
 	// Printing the sentence and the time we've calculated
-	paragraph.innerHTML = sentence + '<span class="timer">' + diff.days() + dayString + diff.hours() + hourString + diff.minutes() + minuteString + diff.seconds() + secondString + '</span>';
+	date_paragraph.innerHTML = sentence + '<span class="timer">' + diff.days() + dayString + diff.hours() + hourString + diff.minutes() + minuteString + diff.seconds() + secondString + '</span>';
+
+	timezones_paragraph.innerHTML = 'Jurgen: ' + currentTime.format('LTS') + '<br>Yours: ' + localTime.format('LTS');
 }
 
 displayTime();

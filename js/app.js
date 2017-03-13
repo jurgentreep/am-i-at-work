@@ -30,7 +30,7 @@ function displayTime() {
 	if (currentTime >= startTime &&
 		currentTime <= endTime &&
 		isWeekend === false) {
-		var diff = currentTime.diff(endTime);
+		var diff = moment.duration(endTime.diff(currentTime));
 
 		var sentence = 'Yes, I will be working for another ';
 	} else {

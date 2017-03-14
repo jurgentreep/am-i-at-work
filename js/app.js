@@ -1,7 +1,7 @@
 var date_paragraph = document.querySelector('.date');
 var timezones_paragraph = document.createElement('p');
 date_paragraph.parentNode.insertBefore(timezones_paragraph, date_paragraph.nextSibling);
-timezones_paragraph.className = 'date';
+timezones_paragraph.className = 'times';
 
 function displayTime() {
 	// Variables to do my comparisons

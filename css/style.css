@@ -35,6 +35,11 @@ body {
 	margin: 0.5em 1em;
 }
 
+.times {
+	margin: 0.5em 1em;
+	font-size: 0.75em;
+}
+
 .date-box::before, .date-box::after {
 	content: "";
     height: 1px;
